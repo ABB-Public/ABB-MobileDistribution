@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ABB-MobileDistribution/static/css/main.fe63167d.css",
-    "main.js": "/ABB-MobileDistribution/static/js/main.c72025df.js",
+    "main.js": "/ABB-MobileDistribution/static/js/main.10a643ea.js",
     "static/js/453.88d91a64.chunk.js": "/ABB-MobileDistribution/static/js/453.88d91a64.chunk.js",
     "static/media/ABBvoice_Lt.ttf": "/ABB-MobileDistribution/static/media/ABBvoice_Lt.abfe34eacb0d7c55fa82.ttf",
     "static/media/ABBvoice_Rg.ttf": "/ABB-MobileDistribution/static/media/ABBvoice_Rg.3c9f39e1b0dd1d7f79a3.ttf",
@@ -9,11 +9,11 @@
     "static/media/ABBvoice_Bd.ttf": "/ABB-MobileDistribution/static/media/ABBvoice_Bd.ab7a4b811c9bce89f42b.ttf",
     "index.html": "/ABB-MobileDistribution/index.html",
     "main.fe63167d.css.map": "/ABB-MobileDistribution/static/css/main.fe63167d.css.map",
-    "main.c72025df.js.map": "/ABB-MobileDistribution/static/js/main.c72025df.js.map",
+    "main.10a643ea.js.map": "/ABB-MobileDistribution/static/js/main.10a643ea.js.map",
     "453.88d91a64.chunk.js.map": "/ABB-MobileDistribution/static/js/453.88d91a64.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fe63167d.css",
-    "static/js/main.c72025df.js"
+    "static/js/main.10a643ea.js"
   ]
 }
