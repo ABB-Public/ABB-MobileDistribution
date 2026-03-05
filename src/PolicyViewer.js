@@ -5,7 +5,7 @@ import AbbHeader from "./componets/AbbHeader.jsx";
 export default function PolicyViewer() {
   const { appName, fileName } = useParams();
 
-  const file = `/policies/${appName}/${fileName}`;
+  const file = `${process.env.PUBLIC_URL}/policies/${appName}/${fileName}`;
   
   console.log("PolicyViewer component loaded");
   console.log("Loading file:", file);

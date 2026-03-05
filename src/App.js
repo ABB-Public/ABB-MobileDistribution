@@ -12,7 +12,7 @@ function App() {
     <Router basename="/ABB-MobileDistribution">
       <Routes>
         <Route path="/" element={<PolicyList />} />
-        <Route path="/policies/:appName/:fileName" element={<PolicyViewer />} />
+        <Route path="/view/:appName/:fileName" element={<PolicyViewer />} />
       </Routes>
     </Router>
   );

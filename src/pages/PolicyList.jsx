@@ -7,7 +7,7 @@ export default function PolicyList() {
     const [apps, setApps] = useState({});
 
     useEffect(() => {
-        fetch("/policies/apps.json")
+        fetch(`${process.env.PUBLIC_URL}/policies/apps.json`)
             .then(response => response.json())
             .then(data => setApps(data))
             .catch(error => console.error("Error fetching apps:", error));
@@ -24,7 +24,7 @@ export default function PolicyList() {
                     {Object.entries(apps).map(([appName, files]) => (
                         <li key={appName} style={{ marginBottom: "20px" }}>
                             <h2>
-                                <Link to={`/policies/${appName}/index.md`}>
+                                <Link to={`/view/${appName}/index.md`}>
                                     {appName}
                                 </Link>
                             </h2>
