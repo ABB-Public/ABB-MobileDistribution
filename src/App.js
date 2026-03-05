@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import './styles/abb.css';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import PolicyViewer from './PolicyViewer.js';
+import PolicyList from './pages/PolicyList.jsx';
 
 function App() {
+  console.log("App component rendered");
+  console.log("Current location:", window.location.pathname);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router basename="/ABB-MobileDistribution">
+      <Routes>
+        <Route path="/" element={<PolicyList />} />
+        <Route path="/policies/:appName/:fileName" element={<PolicyViewer />} />
+      </Routes>
+    </Router>
   );
 }
 

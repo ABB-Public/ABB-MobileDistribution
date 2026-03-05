@@ -1,0 +1,113 @@
+/* ABB Fonts */
+@font-face {
+  font-family: 'ABBvoice';
+  src: url("../assets//fonts/ABBvoice_Rg.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'ABBvoice Light';
+  src: url("../assets/fonts/ABBvoice_Lt.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'ABBvoice Medium';
+  src: url("../assets/fonts/ABBvoice_Md.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'ABBvoice Bold';
+  src: url("../assets/fonts/ABBvoice_Bd.ttf") format("truetype");
+}
+
+/* Generic Layout */
+body {
+  width: 100%;
+  max-width: 100%;
+  min-width: 320px;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+}
+
+.content {
+  width: 100%;
+}
+
+.mid {
+  width: 1280px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ABB Header */
+.custom-header {
+  background-image: url("../assets/images/ABB_Logo_Screen_RGB_29px_@2x.png");
+  background-repeat: no-repeat;
+  background-size: 76px 29px;
+  background-position: 1.5%;
+  text-align: center;
+  vertical-align: middle;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  padding: 20px 0px 16px 0px;
+}
+
+.custom-header h3 {
+  font-family: "ABBvoice Bold", sans-serif;
+  font-size: 26px;
+  margin: 0;
+}
+
+/* Typography */
+h1 {
+  font-family: "ABBvoice Bold", sans-serif;
+  font-size: 26px;
+  color: #000;
+}
+
+h2 {
+  font-family: "ABBvoice", sans-serif;
+  font-size: 22px;
+  color: #000;
+}
+
+h3, h4, p, li, th, td {
+  font-family: "ABBvoice", sans-serif;
+  color: #000;
+}
+
+p, li {
+  font-size: 14px;
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th {
+  background-color: #F4F4F4;
+  font-family: "ABBvoice Bold";
+  font-size: 14px;
+}
+
+td {
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  .mid { width: calc(100% - 60px); padding: 0 30px; }
+}
+
+@media (min-width: 521px) {
+  .mid { width: calc(100% - 60px); padding: 0 30px; }
+}
+
+@media (min-width: 1200px) {
+  .mid {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
