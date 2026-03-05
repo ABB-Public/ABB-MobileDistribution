@@ -31,9 +31,14 @@ body {
 }
 
 .mid {
-  width: 1280px;
+  width: 100%;
   display: block;
   margin: 0 auto;
+}
+
+.mid iframe {
+  display: block;
+  max-width: 100%;
 }
 
 /* ABB Header */

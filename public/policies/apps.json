@@ -167,6 +167,9 @@
   "Swicom": [
     "index.md"
   ],
+  "test": [
+    "test.pdf"
+  ],
   "TestApp": [
     "index.html"
   ],
