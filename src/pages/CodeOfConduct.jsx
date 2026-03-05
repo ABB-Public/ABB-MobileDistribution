@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import useDeviceDetection from '../utility/DeviceDetction';
 import AbbHeader from '../componets/AbbHeader';
 
-const DeviceDetectionExample = () => {
+const CodeOfConduct = () => {
   const { deviceType, isMobile } = useDeviceDetection();
   // console.log("Device type detected:", deviceType , "isMobile:", isMobile);
   useEffect(() => {
@@ -56,4 +56,4 @@ const DeviceDetectionExample = () => {
   );
 };
 
-export default DeviceDetectionExample;
+export default CodeOfConduct;

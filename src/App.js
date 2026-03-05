@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import PolicyViewer from './PolicyViewer.js';
 import CoCPage from './pages/CodeOfConduct.jsx';
 import PolicyList from './pages/PolicyList.jsx';
+import Closer from './pages/Closer.jsx';
 
 function App() {
   // console.log("App component rendered");
@@ -28,6 +29,10 @@ function App() {
         <Route
           path="/view/acknowledgments/r2r-academy/:fileName"
           element={<PolicyViewer defaultAppName="r2r-academy" basePath="acknowledgments" />}
+        />
+        <Route
+          path="/Closer"
+          element={<Closer />}
         />
       </Routes>
     </Router>
