@@ -22,11 +22,11 @@
   color: #000;
 }
 
-.md-body h3 {
+/* .md-body h3 {
   font-family: "ABBvoice", sans-serif;
   font-size: 18px;
   color: #000;
-}
+} */
 
 .md-body p, .md-body li {
   font-size: 14px;
@@ -81,7 +81,7 @@
 }
 
 .md-body a {
-  color: #0066cc;
+  color: #000 /*#0066cc8*/;
   text-decoration: none;
 }
 

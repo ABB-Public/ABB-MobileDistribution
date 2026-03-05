@@ -54,6 +54,11 @@ body {
   margin: 0;
 }
 
+.imgContainer{
+	display:block; margin: 0px auto 0px auto; text-align: center;
+}
+
+
 /* Typography */
 h1 {
   font-family: "ABBvoice Bold", sans-serif;
@@ -67,13 +72,48 @@ h2 {
   color: #000;
 }
 
-h3, h4, p, li, th, td {
-  font-family: "ABBvoice", sans-serif;
-  color: #000;
+h3 {
+	font: 100% "ABBvoice Bold", sans-serif;
+	line-height: normal;
+	font-size: 16x;
+	/*text-align: left;*/
+}
+  
+h4 {
+	font: 100% "ABBvoice Bold", sans-serif;
+	line-height: normal;
+	font-size: 16x;
+	text-align: left;
 }
 
-p, li {
-  font-size: 14px;
+h4:before {
+    content: "—";
+    font-size: 25px;
+    color: #ff000f;
+    display: block;
+}  
+
+h5 {
+	font: 100% "ABBvoice Bold", sans-serif;
+	line-height: normal;
+	font-size: 12x;
+	text-align: left;
+}
+  
+p {
+	font: 100% "ABBvoice Regular", sans-serif;
+	font-size: 14px;
+	color: #000;
+}
+  
+li {
+	font: 100% "ABBvoice Regular", sans-serif;
+	font-size: 14px;
+	color: #000;
+}
+  
+a:link, a:visited {
+  color: #4e4e4e;
 }
 
 /* Table */
@@ -110,4 +150,8 @@ td {
     max-width: 1024px;
     margin: 0 auto;
   }
+}
+
+.textContainer.headline {
+    padding: 8px 0 8px 0;
 }
