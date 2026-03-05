@@ -1,25 +1,25 @@
 import './App.css';
 import './styles/abb.css';
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import PolicyViewer from './PolicyViewer.js';
-import CoCPage from './pages/CodeOfConduct.jsx';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import PolicyViewerPage from './pages/PolicyViewer.jsx';
+import CodeOfConductPage from './pages/CodeOfConduct.jsx';
 import PolicyList from './pages/PolicyList.jsx';
 import Closer from './pages/Closer.jsx';
 
 function App() {
   // console.log("App component rendered");
   // console.log("Current location:", window.location.pathname);
-  
+
   return (
     <Router basename="/ABB-MobileDistribution">
       <Routes>
-        { <Route path="/" element={<PolicyList />} />}
-        <Route path="/view/:appName/:fileName" element={<PolicyViewer />} />
-        <Route path="/CodeOfConduct" element={<CoCPage />} />
+        {<Route path="/" element={<PolicyList />} />}
+        <Route path="/view/:appName/:fileName" element={<PolicyViewerPage />} />
+        <Route path="/CodeOfConduct" element={<CodeOfConductPage />} />
         <Route
-          path="/acknowledgments/r2r-academy"
+          path="/view/acknowledgments/r2r-academy"
           element={
-            <PolicyViewer
+            <PolicyViewerPage
               defaultAppName="r2r-academy"
               defaultFileName="index.md"
               basePath="acknowledgments"
@@ -28,7 +28,7 @@ function App() {
         />
         <Route
           path="/view/acknowledgments/r2r-academy/:fileName"
-          element={<PolicyViewer defaultAppName="r2r-academy" basePath="acknowledgments" />}
+          element={<PolicyViewerPage defaultAppName="r2r-academy" basePath="acknowledgments" />}
         />
         <Route
           path="/Closer"

@@ -8,7 +8,14 @@ const Closer = () => {
             if (deviceType === "Android") {
                 window.location.href = "https://play.google.com/store/apps/details?id=com.abb.noddack";
             } else if (deviceType === "iOS" || deviceType === "iPad" || deviceType === "iPhone" || deviceType === "iPod") {
-                window.location.href = "https://apps.apple.com/us/app/abb-closer/id1560948190";
+                
+                const isIOS = deviceType === "iOS" || deviceType === "iPad" || deviceType === "iPhone" || deviceType === "iPod";
+                console.log("Device type detected:", deviceType , "isMobile:", isMobile , "isIOS:", isIOS);
+                const url = isIOS
+                ? "itms-apps://apps.apple.com/us/app/abb-closer/id1560948190"
+                : "https://apps.apple.com/us/app/abb-closer/id1560948190";
+
+                window.location.href = url;
             }else if (deviceType === "Huawei") {
                 window.location.href = "https://appgallery.huawei.com/#/app/C103202337";
             }
