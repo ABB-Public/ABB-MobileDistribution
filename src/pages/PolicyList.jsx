@@ -1,21 +1,23 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import AbbHeader from "../componets/AbbHeader";
+// import { useEffect, useState } from "react";
+// import { Link } from "react-router-dom";
+// import AbbHeader from "../componets/AbbHeader";
 
 
 export default function PolicyList() {
-    const [apps, setApps] = useState({});
+    // const [apps, setApps] = useState({});
 
-    useEffect(() => {
-        fetch(`${process.env.PUBLIC_URL}/policies/apps.json`)
-            .then(response => response.json())
-            .then(data => setApps(data))
-            .catch(error => console.error("Error fetching apps:", error));
-    }, []);
+    // useEffect(() => {
+    //     fetch(`${process.env.PUBLIC_URL}/policies/apps.json`)
+    //         .then(response => response.json())
+    //         .then(data => setApps(data))
+    //         .catch(error => console.error("Error fetching apps:", error));
+    // }, []);
+
+    window.location.href = "https://go.insideplus.abb.com/information-systems/gf-is/is-teams/innovation/our-services/mobile-distribution";
 
     return (
         <>
-            <AbbHeader appName="All Applications" />
+            {/* <AbbHeader appName="All Applications" />
 
             <div className="mid" style={{ padding: "40px" }}>
                 <p>Select an application to view its privacy documents:</p>
@@ -32,7 +34,7 @@ export default function PolicyList() {
                     ))}
                 </ul>
 
-            </div>
+            </div> */}
 
 
         </>

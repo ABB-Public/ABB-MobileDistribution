@@ -2,15 +2,13 @@ import { useParams } from "react-router-dom";
 import MarkdownPage from "./componets/MarkdownPage.jsx";
 import AbbHeader from "./componets/AbbHeader.jsx";
 
-export default function PolicyViewer() {
-  const { appName, fileName } = useParams();
+export default function PolicyViewer({ defaultAppName, defaultFileName, basePath = "policies" }) {
+  const params = useParams();
+  const appName = params.appName || defaultAppName;
+  const fileName = params.fileName || defaultFileName || "index.md";
 
-  const file = `${process.env.PUBLIC_URL}/policies/${appName}/${fileName}`;
+  const file = `${process.env.PUBLIC_URL}/${basePath}/${appName}/${fileName}`;
   
-  console.log("PolicyViewer component loaded");
-  console.log("Loading file:", file);
-  console.log("File extension:", fileName.split('.').pop());
-  console.log("App name:", appName)
   return (
     <>
   <AbbHeader appName={appName} />

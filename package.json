@@ -22,7 +22,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "prebuild": "node src/scripts/generateIndex.js && copyfiles -u 1 \"src/policies/**/*\" public/ && copyfiles -u 1 \"src/assets/**/*\" public/",
+    "prebuild": "copyfiles -u 1 \"src/policies/**/*\" public/ && copyfiles -u 1 \"src/acknowledgments/**/*\" public/ && copyfiles -u 1 \"src/assets/**/*\" public/ && copyfiles -u 1 \"src/images/**/*\" public/ && node src/scripts/generateIndex.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

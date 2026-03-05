@@ -13,10 +13,8 @@ export default function MarkdownPage({ filePath }) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    console.log("MarkdownPage fetching:", filePath);
     fetch(filePath)
       .then((res) => {
-        console.log("Fetch response status:", res.status, res.statusText);
         if (!res.ok) {
           throw new Error(`Failed to load ${filePath}: ${res.status} ${res.statusText}`);
         }
