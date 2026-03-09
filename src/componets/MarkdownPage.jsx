@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
+import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
@@ -11,6 +12,23 @@ import "../styles/markdown.css";
 export default function MarkdownPage({ filePath }) {
   const [content, setContent] = useState("");
   const [error, setError] = useState(null);
+
+  const sanitizeSchema = {
+    ...defaultSchema,
+    attributes: {
+      ...defaultSchema.attributes,
+      a: [...(defaultSchema.attributes?.a || []), "target", "rel"],
+      code: [...(defaultSchema.attributes?.code || []), "className"],
+      pre: [...(defaultSchema.attributes?.pre || []), "className"],
+      span: [...(defaultSchema.attributes?.span || []), "className"],
+      h1: [...(defaultSchema.attributes?.h1 || []), "id"],
+      h2: [...(defaultSchema.attributes?.h2 || []), "id"],
+      h3: [...(defaultSchema.attributes?.h3 || []), "id"],
+      h4: [...(defaultSchema.attributes?.h4 || []), "id"],
+      h5: [...(defaultSchema.attributes?.h5 || []), "id"],
+      h6: [...(defaultSchema.attributes?.h6 || []), "id"],
+    },
+  };
 
   useEffect(() => {
     fetch(filePath)
@@ -43,6 +61,7 @@ export default function MarkdownPage({ filePath }) {
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[
           rehypeRaw,
+          [rehypeSanitize, sanitizeSchema],
           rehypeSlug,
           [rehypeAutolinkHeadings, { behavior: "wrap" }],
           rehypeHighlight,

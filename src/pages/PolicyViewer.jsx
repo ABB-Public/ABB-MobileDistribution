@@ -7,6 +7,25 @@ export default function PolicyViewerPage({ defaultAppName, defaultFileName, base
   const appName = params.appName || defaultAppName;
   const fileName = params.fileName || defaultFileName || "index.md";
 
+  const isSafeSegment = (value) => {
+    return Boolean(value) && !value.includes("..") && !value.includes("/") && !value.includes("\\") && !value.startsWith(".");
+  };
+
+  const isAllowedFile = (value) => {
+    return isSafeSegment(value) && (value.endsWith(".md") || value.endsWith(".pdf"));
+  };
+
+  if (!isSafeSegment(appName) || !isAllowedFile(fileName)) {
+    return (
+      <>
+        <AbbHeader appName={appName || "Document"} />
+        <div className="mid">
+          <p>Invalid document path.</p>
+        </div>
+      </>
+    );
+  }
+
   const file = `${process.env.PUBLIC_URL}/${basePath}/${appName}/${fileName}`;
 
   return (
